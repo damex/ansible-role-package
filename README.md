@@ -1,1 +1,1 @@
-# ansible package role
+# ansible timezone role
