@@ -5,7 +5,10 @@ galaxy_info:
   description: package role
   license: GPLv2
   min_ansible_version: 2.8
-  galaxy_tags: []
+  galaxy_tags:
+    - apt
+    - packaging
+    - system
   platforms:
     - name: "Debian"
       versions:
