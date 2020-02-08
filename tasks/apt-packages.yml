@@ -6,4 +6,4 @@
     state: "{{ item.state | default(package_apt_package_state) }}"
     purge: "{{ item.purge | default(package_apt_package_purge) }}"
     force_apt_get: "{{ apt_force_apt_get }}"
-  loop: "{{ package_apt_packages }}"
+  loop: "{{ package_packages }}"
