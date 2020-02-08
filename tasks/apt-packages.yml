@@ -5,5 +5,5 @@
     install_recommends: "{{ package_apt_install_recommends }}"
     state: "{{ item.state | default(package_apt_package_state) }}"
     purge: "{{ item.purge | default(package_apt_package_purge) }}"
-    force_apt_get: "{{ apt_force_apt_get }}"
+    force_apt_get: "{{ package_apt_force_apt_get }}"
   loop: "{{ package_packages }}"
