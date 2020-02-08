@@ -1,0 +1,7 @@
+---
+- name: ensure apt cache valid time
+  apt:
+    update_cache: true
+    cache_valid_time: "{{ package_apt_cache_valid_time }}"
+    force_apt_get: "{{ package_apt_force_apt_get }}"
+  become: true
