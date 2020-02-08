@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: package
   author: Roman Kuzmitskii
   description: package role
   license: GPLv2
