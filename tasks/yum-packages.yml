@@ -1,0 +1,7 @@
+---
+- name: ensure yum packages
+  yum:
+    pkg: "{{ item.name | default(item) }}"
+    state: "{{ item.state | default(package_yum_package_state) }}"
+  loop: "{{ package_packages }}"
+  become: true

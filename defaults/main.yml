@@ -5,3 +5,4 @@ package_apt_package_state: "present"
 package_apt_package_purge: true
 package_apt_force_apt_get: true
 package_apt_cache_valid_time: 86400
+package_yum_package_state: "present"
