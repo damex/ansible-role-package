@@ -7,3 +7,4 @@
     purge: "{{ item.purge | default(package_apt_package_purge) }}"
     force_apt_get: "{{ package_apt_force_apt_get }}"
   loop: "{{ package_packages }}"
+  become: true
