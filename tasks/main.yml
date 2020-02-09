@@ -6,3 +6,5 @@
       when: ansible_distribution == 'Debian'
     - import_tasks: apt-packages.yml
       when: ansible_distribution == 'Debian'
+    - import_tasks: yum-packages.yml
+      when: ansible_distribution == 'CentOS'
