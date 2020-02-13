@@ -1,6 +1,6 @@
 # ansible package role
 
-[![Build Status](https://travis-ci.org/damex/ansible-role-package.svg?branch=master)](https://travis-ci.org/damex/ansible-role-package)
+[![Build Status](https://travis-ci.com/damex/ansible-role-package.svg?branch=master)](https://travis-ci.com/damex/ansible-role-package)
 
 The package role is designed to be used with Debian distributive.
 
