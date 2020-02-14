@@ -11,7 +11,7 @@
 - name: ensure apt sources.list.d
   template:
     src: "sources.list.j2"
-    dest: "{{ apt_sources_list_conf_dir }}/{{ item.name }}.list"
+    dest: "{{ package_apt_sources_list_conf_dir }}/{{ item.name }}.list"
     group: root
     owner: root
     mode: 0644
