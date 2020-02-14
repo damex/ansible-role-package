@@ -15,5 +15,6 @@
     group: root
     owner: root
     mode: 0644
+  become: true
   loop: "{{ package_repositories }}"
   register: package_apt_repositories
