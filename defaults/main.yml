@@ -1,8 +1,14 @@
 ---
 package_packages: []
+package_repository_keys: []
+package_repositories: []
+package_apt_dir: "/etc/apt"
+package_apt_sources_list_conf_file: "{{ package_apt_dir }}/sources.list"
+package_apt_sources_list_conf_dir: "{{ package_apt_dir }}/sources.list.d"
 package_apt_install_recommends: false
 package_apt_package_state: "present"
 package_apt_package_purge: true
 package_apt_force_apt_get: true
 package_apt_cache_valid_time: 86400
+package_apt_key_state: "present"
 package_yum_package_state: "present"
