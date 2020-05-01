@@ -1,7 +1,11 @@
 ---
 - name: ensure apt packages
   apt:
-    pkg: "{{ item.name | default(item) }}"
+    pkg: >
+      {{ item.name | default(item) }}
+      {%- if item.version is defined and item.version | length -%}
+        ={{ item.version }}
+      {% endif %}
     install_recommends: "{{ package_apt_install_recommends }}"
     state: "{{ item.state | default(package_apt_package_state) }}"
     purge: "{{ item.purge | default(package_apt_package_purge) }}"
