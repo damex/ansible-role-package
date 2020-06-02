@@ -1,7 +1,7 @@
 ---
 - name: ensure apt packages
   apt:
-    pkg: >
+    pkg: >-
       {{ item.name | default(item) }}
       {%- if item.version is defined and item.version | length -%}
         ={{ item.version }}

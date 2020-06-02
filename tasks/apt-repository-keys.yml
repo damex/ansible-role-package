@@ -1,4 +1,10 @@
 ---
+- import_tasks: apt-packages.yml
+  vars:
+    package_packages:
+      - name: "gpg"
+      - name: "gpg-agent"
+
 - name: ensure apt repository keys
   apt_key:
     id: "{{ item.id }}"
