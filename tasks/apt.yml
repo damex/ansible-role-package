@@ -1,0 +1,7 @@
+---
+- name: ensure apt
+  block:
+    - import_tasks: apt-repository-keys.yml
+    - import_tasks: apt-repositories.yml
+    - import_tasks: apt-cache.yml
+    - import_tasks: apt-packages.yml
