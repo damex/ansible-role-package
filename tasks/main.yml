@@ -7,3 +7,5 @@
         ansible_distribution == 'Ubuntu'
     - import_tasks: yum-packages.yml
       when: ansible_distribution == 'CentOS'
+  tags:
+    - package
