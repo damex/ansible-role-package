@@ -1,20 +1,22 @@
 ---
-- name: ensure apt sources.list is empty
-  copy:
-    content: ""
-    dest: "{{ package_apt_sources_list_conf_file }}"
-    group: root
-    owner: root
-    mode: 0644
-  become: true
+- name: ensure apt sources
+  block:
+    - name: ensure apt sources.list is empty
+      copy:
+        content: ""
+        dest: "{{ package_apt_sources_list_conf_file }}"
+        group: root
+        owner: root
+        mode: 0644
+      notify: ensure apt cache
 
-- name: ensure apt sources.list.d
-  template:
-    src: "sources.list.j2"
-    dest: "{{ package_apt_sources_list_conf_dir }}/{{ item.name }}.list"
-    group: root
-    owner: root
-    mode: 0644
+    - name: ensure apt sources.list.d
+      template:
+        src: "sources.list.j2"
+        dest: "{{ package_apt_sources_list_conf_dir }}/{{ item.name }}.list"
+        group: root
+        owner: root
+        mode: 0644
+      loop: "{{ package_repositories }}"
+      notify: ensure apt cache
   become: true
-  loop: "{{ package_repositories }}"
-  register: package_apt_repositories
