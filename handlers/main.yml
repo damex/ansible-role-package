@@ -1,0 +1,6 @@
+---
+- name: ensure apt cache
+  apt:
+    update_cache: true
+    force_apt_get: "{{ package_apt_force_apt_get }}"
+  become: true
