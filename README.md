@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/damex/ansible-role-package.svg?branch=master)](https://travis-ci.com/damex/ansible-role-package)
 
-The package role is designed to be used with Debian distributive.
+The package role is designed to be used with `Debian Buster` and `Ubuntu Focal` distributives.
 
 `Ansible Galaxy` users can add package role using the following command:
 
