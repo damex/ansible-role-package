@@ -1,6 +1,6 @@
 # ansible package role
 
-[![Build Status](https://travis-ci.com/damex/ansible-role-package.svg?branch=master)](https://travis-ci.com/damex/ansible-role-package)
+[![linting](https://github.com/damex/ansible-role-package/workflows/linting/badge.svg)](https://github.com/damex/ansible-role-package/actions)
 
 The package role is designed to be used with `Debian Buster` and `Ubuntu Focal` distributives.
 
