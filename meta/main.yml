@@ -4,16 +4,12 @@ galaxy_info:
   author: Roman Kuzmitskii
   description: package role
   license: GPLv2
-  min_ansible_version: 2.9
+  min_ansible_version: 2.10
   galaxy_tags:
     - apt
     - packaging
     - system
-    - yum
   platforms:
-    - name: "EL"
-      versions:
-        - 7
     - name: "Debian"
       versions:
         - "buster"

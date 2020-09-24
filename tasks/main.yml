@@ -2,10 +2,9 @@
 - name: ensure package
   block:
     - import_tasks: environment.yml
-    - include_tasks: apt.yml
-      when: ansible_distribution == 'Debian' or
-        ansible_distribution == 'Ubuntu'
-    - import_tasks: yum-packages.yml
-      when: ansible_distribution == 'CentOS'
+    - import_tasks: repository-keys.yml
+    - import_tasks: repositories.yml
+    - import_tasks: cache.yml
+    - import_tasks: packages.yml
   tags:
     - package
