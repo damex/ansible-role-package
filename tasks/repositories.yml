@@ -2,7 +2,7 @@
 - name: ensure apt sources
   block:
     - name: ensure apt sources.list is empty
-      copy:
+      ansible.builtin.copy:
         content: ""
         dest: "{{ package_apt_sources_list_conf_file }}"
         group: root
@@ -11,7 +11,7 @@
       notify: ensure apt cache
 
     - name: ensure apt sources.list.d
-      template:
+      ansible.builtin.template:
         src: "sources.list.j2"
         dest: "{{ package_apt_sources_list_conf_dir }}/{{ item.name }}.list"
         group: root

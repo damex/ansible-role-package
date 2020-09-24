@@ -1,6 +1,6 @@
 ---
 - name: ensure apt packages
-  apt:
+  ansible.builtin.apt:
     pkg: >-
       {{ item.name | default(item) }}
       {%- if item.version is defined and item.version | length -%}

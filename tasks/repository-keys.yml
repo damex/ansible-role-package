@@ -1,12 +1,12 @@
 ---
-- import_tasks: apt-packages.yml
+- import_tasks: packages.yml
   vars:
     package_packages:
       - name: "gpg"
       - name: "gpg-agent"
 
 - name: ensure apt repository keys
-  apt_key:
+  ansible.builtin.apt_key:
     id: "{{ item.id }}"
     url: "{{ item.url }}"
     state: "{{ item.state | default(package_apt_key_state) }}"
